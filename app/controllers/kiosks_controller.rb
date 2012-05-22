@@ -1,14 +1,11 @@
 class KiosksController < ApplicationController
   # GET /kiosks
   # GET /kiosks.json
+  respond_to :json
   def index
     @kiosks = Kiosk.all
     
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @kiosks.as_json() }
-      format.js { render json: @kiosks.as_json() }
-    end
+    render :json => @kiosks.to_json,:callback => params[:callback]
   end
 
   # GET /kiosks/1
