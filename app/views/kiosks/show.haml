@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %b Nombre:
+  = @kiosk.nombre
+%p
+  %b Precio:
+  = @kiosk.precio
+%p
+  %b Image:
+  = @kiosk.image
+= link_to 'Edit', edit_kiosk_path(@kiosk)
+
+= link_to 'Back', kiosks_path

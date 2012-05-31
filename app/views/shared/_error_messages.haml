@@ -1,0 +1,6 @@
+- if target.errors.any?
+  .alert.alert-error
+    %a.close{:href => "#"}x
+    %ul
+      - target.errors.full_messages.each do |msg|
+        %li= msg

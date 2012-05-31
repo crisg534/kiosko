@@ -1,0 +1,30 @@
+%br
+%center
+  .row
+    .span12
+      %h1 Kiosks Logs
+      %br
+      %br
+      .row
+        .span3
+          = #render "/shared/menudrop"
+        .span8
+          %form.form-horizontal
+            %fieldset
+              #color{:style => "background-color:#s32c3e3; width: 900px;"}
+                %table#kiosks.display{"data-source" =>kiosks_url(format: "json")}
+                  %thead
+                    %tr
+                      %th Name
+                      %th Precio
+                      %th created_at
+                      %th Portada
+                      %th Pdf
+                      %th edit
+                      %th delete
+                  %tbody
+                %br
+                =link_to " Create Kiosks", {:action => 'new'}, :class=>"btn btn-large  btn-primary icon-plus-sign "
+
+
+

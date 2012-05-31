@@ -1,11 +1,14 @@
 class KiosksController < ApplicationController
+  #before_filter :authenticate_user!, :only => [:index, :edit, :update, :destroy] 
   # GET /kiosks
   # GET /kiosks.json
-  respond_to :json
+  #respond_to :json
   def index
     @kiosks = Kiosk.all
-    
-    render :json => @kiosks.to_json,:callback => params[:callback]
+    respond_to do |format|
+      format.html
+      format.json { render json: KiosksDatatable.new(view_context) }
+    end
   end
 
   # GET /kiosks/1
@@ -77,5 +80,7 @@ class KiosksController < ApplicationController
       format.html { redirect_to kiosks_url }
       format.json { head :no_content }
     end
+
+
   end
 end

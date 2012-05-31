@@ -1,6 +1,13 @@
 Kiosko::Application.routes.draw do
-  resources :kiosks
+  devise_for :users
 
+  resources :kiosks
+  resources :pdf
+	resources :portada
+  get "api/get_api"
+  get "api/index"
+
+  root to: "kiosks#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

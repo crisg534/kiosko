@@ -1,0 +1,13 @@
+- flash.each do |key, value|
+  - if key == :error
+    %div{:class => "alert alert-error", "data-alert" => "alert"}
+      %a.close{:href => "#"}x
+      %p= value
+  - if key == :notice
+    %div{:class => "alert alert-success", "data-alert" => "alert"}
+      %a.close{:href => "#"}x
+      %p= value
+
+  - content_for :javascript do
+    :javascript
+      setTimeout("$('.alert').slideUp('slow')",5000);

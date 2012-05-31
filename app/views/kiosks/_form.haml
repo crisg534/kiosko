@@ -1,0 +1,24 @@
+= form_for(@kiosk) do |f|
+
+  .field
+    = f.label :nombre
+    %br/
+    = f.text_field :nombre
+  .field
+    = f.label :precio
+    %br/
+    = f.text_field :precio
+  .field
+    = f.label :image
+    %br/
+    = f.text_field :image
+  .field
+    = f.label :portada
+    %br/
+    = f.file_field :portada
+  .field
+    = f.label :pdf
+    %br/
+    = f.file_field :pdf
+  .field
+    = f.submit
