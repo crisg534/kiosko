@@ -4,3 +4,8 @@
     %ul
       - target.errors.full_messages.each do |msg|
         %li= msg
+
+  :javascript
+    $(".close").click(function() {
+      return $('.alert').slideUp('slow');
+    });

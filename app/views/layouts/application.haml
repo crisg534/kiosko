@@ -31,17 +31,14 @@
     .container
       .content
         .row
+          .span3
+            
+              
+          
           .span9
             = render "/shared/flash_messages"
             = yield
-          .span3
-            .well.sidebar-nav
-              %h3 Sidebar
-              %ul.nav.nav-list
-                %li.nav-header Sidebar
-                %li= link_to "Link1", "/path1"
-                %li= link_to "Link2", "/path2"
-                %li= link_to "Link3", "/path3"
+          
             / /.well
           / /span
         / /row

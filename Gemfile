@@ -1,3 +1,5 @@
+require 'timeout'
+
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
@@ -29,6 +31,6 @@ gem 'therubyracer'
 gem 'devise', '2.0.4'
 gem 'haml', '3.1.4'
 
-
+gem 'paperclipdropbox'
 gem 'paperclip'
 gem 'twitter-bootstrap-rails', '2.0.6'
