@@ -9,7 +9,8 @@
     %br/
     = f.text_field :precio
   .control-group
-    %label.control-label{:for => "textarea"} Descripcion
+    %label.control-label{:for => "textarea"}
+      =f.label :descripcion
     .controls
       =f.text_area :descripcion , id:"textarea" ,class:"input-xlarge",:size => "25x5",:maxlength=>"100"
        

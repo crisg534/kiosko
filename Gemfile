@@ -8,7 +8,7 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg', '0.13.2'
-
+gem 'acts_as_api'
 
 # Gems used only for assets and not required
 # in production environments by default.

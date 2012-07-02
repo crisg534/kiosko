@@ -1,9 +1,0 @@
-class ApiController < ApplicationController
-  def get_api
-    @kiosks = Kiosk.all
-    render :json => @kiosks.to_json(:only =>[:id,:nombre,:precio,:create_at], :methods => [:portada_url,:pdf_url])
-  end
-  def index
-
-  end
-end
