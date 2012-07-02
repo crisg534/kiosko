@@ -1,5 +1,5 @@
 = form_for(@kiosk) do |f|
-
+  
   .field
     = f.label :nombre
     %br/
@@ -8,10 +8,11 @@
     = f.label :precio
     %br/
     = f.text_field :precio
-  .field
-    = f.label :image
-    %br/
-    = f.text_field :image
+  .control-group
+    %label.control-label{:for => "textarea"} Descripcion
+    .controls
+      =f.text_area :descripcion , id:"textarea" ,class:"input-xlarge",:size => "25x5",:maxlength=>"100"
+       
   .field
     = f.label :portada
     %br/
@@ -19,6 +20,7 @@
   .field
     = f.label :pdf
     %br/
-    = f.file_field :pdf
-  .field
-    = f.submit
+    = f.file_field :pdf 
+  .form-actions
+    =f.submit
+ 

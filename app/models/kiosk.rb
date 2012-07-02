@@ -5,7 +5,7 @@ class Kiosk < ActiveRecord::Base
   has_attached_file :pdf,
                     :storage => :Dropboxstorage,
                     :path => "/:attachment/:attachment/:id/:style/:filename"
-  attr_accessible :image, :nombre, :precio,:portada,:pdf
+  attr_accessible :image, :nombre, :precio,:portada,:pdf,:descripcion
   validates_attachment_content_type :portada ,content_type: ['image/jpeg', 'image/png', 'image/gif']
   validates_attachment_content_type :pdf ,content_type: ["application/pdf", "application/x-pdf"]
 	

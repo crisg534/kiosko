@@ -26,7 +26,9 @@ private
         #link_to(car.user.name, [@user, car]),data-toggle="modal" href="#myModal"
         h(kiosk.nombre),
         h(kiosk.precio),
-        h(kiosk.created_at),
+        h(kiosk.descripcion),
+        h(kiosk.created_at.to_date),
+       
         link_to("portada" ,kiosk.portada(:original, false)),
         link_to("pdf",kiosk.pdf.url(:original, false)),
         link_to(" Edit", {action: :edit, id: kiosk}, :class=>"btn btn-mini btn-inverse icon-edit"),

@@ -2,28 +2,26 @@
 %center
   .row
     .span12
-      %h1 Kiosks Logs
+      %h1{:style => "color:#8b8a7d"}Magazine Logs 
       %br
       %br
-      .row
-        .span3
-        .span8
-          %form.form-horizontal
-            %fieldset
-              #color{:style => "background-color:#s32c3e3; width: 900px;"}
-                %table#kiosks.display{"data-source" =>kiosks_url(format: "json")}
-                  %thead
-                    %tr
-                      %th Name
-                      %th Precio
-                      %th created_at
-                      %th Portada
-                      %th Pdf
-                      %th edit
-                      %th delete
-                  %tbody
-                %br
-                =link_to " Create Kiosks", {:action => 'new'}, :class=>"btn btn-large  btn-primary icon-plus-sign "
-
-
-
+      
+        #color{:style => "background-color:#s32c3e3; width: 900px;"}
+          %table#kiosks.display{"data-source" =>kiosks_url(format: "json")}
+            %thead
+              %tr
+                %th Name
+                %th Precio
+                %th Descripcion
+                %th created_at
+                %th Portada
+                %th Pdf
+                %th edit
+                %th delete
+            %tbody
+          %br
+          %br
+          %br
+          %br
+          =link_to " Create Kiosks", {action: :new}, class:"btn btn-large   btn-success icon-plus-sign "
+          

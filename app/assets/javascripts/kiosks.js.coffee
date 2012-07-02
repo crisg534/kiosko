@@ -4,7 +4,9 @@ $ ->
     sPaginationType: "full_numbers"
     bJQueryUI: true
     bProcessing: true
-    bServerSide: true
+    bServerSide: false
+    bFilter: false
+    sDom: "<'row-fluid'<'span6'T><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
     sAjaxSource: $('#kiosks').data('source')
     oLanguage:
       sProcessing: "<i class='icon-refresh'>"
