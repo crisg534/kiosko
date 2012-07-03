@@ -9,6 +9,9 @@ class Kiosk < ActiveRecord::Base
   validates_attachment_content_type :portada ,content_type: ['image/jpeg', 'image/png', 'image/gif']
   validates_attachment_content_type :pdf ,content_type: ["application/pdf", "application/x-pdf"]
 	
+	validates_numericality_of :precio
+	validates_presence_of :nombre 
+	
 	def portada_url
        self.portada.url
 	end
